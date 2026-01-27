@@ -1,1 +1,0 @@
-import{Ma as a,db as n,eb as m,nb as i}from"./chunk-E7EU3H4C.js";var t=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=a({type:o,selectors:[["hm-home"]],decls:2,vars:0,template:function(e,c){e&1&&(n(0,"p"),i(1,"home works!"),m())},encapsulation:2,changeDetection:0})};export{t as default};
