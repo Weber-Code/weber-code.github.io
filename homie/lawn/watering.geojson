@@ -1,0 +1,316 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -119.7132951,
+                            39.5882348,
+                            0
+                        ],
+                        [
+                            -119.713283,
+                            39.5882172,
+                            0
+                        ],
+                        [
+                            -119.7131529,
+                            39.5882715,
+                            0
+                        ],
+                        [
+                            -119.7131697,
+                            39.5882916,
+                            0
+                        ],
+                        [
+                            -119.7132951,
+                            39.5882348,
+                            0
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "name": "Zone 1 - Sprinklers",
+                "description": "Back side lawn",
+                "fill-opacity": 0.5,
+                "fill": "#f48fb1",
+                "stroke-opacity": 1,
+                "stroke": "#f48fb1",
+                "stroke-width": 1
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -119.7131343,
+                    39.5882027
+                ]
+            },
+            "properties": {
+                "name": "Yellow House",
+                "description": "5355 Santa Lupe Avenue, Sparks, Nevada 89436, United States",
+                "marker-color": "rgba(160, 122, 122, 1)",
+                "marker-symbol": "home",
+                "marker-size": "large"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -119.7132508,
+                            39.5882286,
+                            0
+                        ],
+                        [
+                            -119.7133118,
+                            39.5882017,
+                            0
+                        ],
+                        [
+                            -119.7132729,
+                            39.5881475,
+                            0
+                        ],
+                        [
+                            -119.7132119,
+                            39.5881749,
+                            0
+                        ],
+                        [
+                            -119.7132508,
+                            39.5882286,
+                            0
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "name": "Zone 2 - Sprinklers",
+                "description": "Back center lawn",
+                "fill-opacity": 0.5,
+                "fill": "#ffcc80",
+                "stroke-opacity": 1,
+                "stroke": "#ffcc80",
+                "stroke-width": 1
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -119.7132635,
+                            39.5881315,
+                            0
+                        ],
+                        [
+                            -119.7132106,
+                            39.588057,
+                            0
+                        ],
+                        [
+                            -119.7130463,
+                            39.5881221,
+                            0
+                        ],
+                        [
+                            -119.7130584,
+                            39.5881371,
+                            0
+                        ],
+                        [
+                            -119.7131999,
+                            39.5880782,
+                            0
+                        ],
+                        [
+                            -119.7132441,
+                            39.5881397,
+                            0
+                        ],
+                        [
+                            -119.7132635,
+                            39.5881315,
+                            0
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "name": "Zone 3 - Drip",
+                "description": "Back side drip",
+                "fill-opacity": 0.5,
+                "fill": "#ffff8d",
+                "stroke-opacity": 1,
+                "stroke": "#ffff8d",
+                "stroke-width": 1
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -119.7130932,
+                            39.5882281,
+                            0
+                        ],
+                        [
+                            -119.7130724,
+                            39.5882002,
+                            0
+                        ],
+                        [
+                            -119.7130114,
+                            39.5882255,
+                            0
+                        ],
+                        [
+                            -119.7130061,
+                            39.5882436,
+                            0
+                        ],
+                        [
+                            -119.7130175,
+                            39.5882591,
+                            0
+                        ],
+                        [
+                            -119.7130932,
+                            39.5882281,
+                            0
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "name": "Zone 4 - Sprinklers / Drip",
+                "description": "Front left flower bed",
+                "fill-opacity": 0.5,
+                "fill": "#c5e1a5",
+                "stroke-opacity": 1,
+                "stroke": "#c5e1a5",
+                "stroke-width": 1
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -119.7130517,
+                            39.5881423,
+                            0
+                        ],
+                        [
+                            -119.7130396,
+                            39.5881253,
+                            0
+                        ],
+                        [
+                            -119.7128907,
+                            39.5881898,
+                            0
+                        ],
+                        [
+                            -119.7129008,
+                            39.5882054,
+                            0
+                        ],
+                        [
+                            -119.7130517,
+                            39.5881423,
+                            0
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "name": "Zone 5 - Sprinklers",
+                "description": "Front right flower bed",
+                "fill-opacity": 0.5,
+                "fill": "#a1c2fa",
+                "stroke-opacity": 1,
+                "stroke": "#a1c2fa",
+                "stroke-width": 1
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -119.7130389,
+                            39.5881537,
+                            0
+                        ],
+                        [
+                            -119.7129068,
+                            39.588211,
+                            0
+                        ],
+                        [
+                            -119.7129638,
+                            39.5882927,
+                            0
+                        ],
+                        [
+                            -119.7130101,
+                            39.5882705,
+                            0
+                        ],
+                        [
+                            -119.71299,
+                            39.5882436,
+                            0
+                        ],
+                        [
+                            -119.7130014,
+                            39.5882178,
+                            0
+                        ],
+                        [
+                            -119.7130671,
+                            39.5881862,
+                            0
+                        ],
+                        [
+                            -119.7130389,
+                            39.5881537,
+                            0
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "name": "Zone 6 - Sprinklers",
+                "description": "Front lawn",
+                "fill-opacity": 0.5,
+                "fill": "#ce93d8",
+                "stroke-opacity": 1,
+                "stroke": "#ce93d8",
+                "stroke-width": 1
+            }
+        }
+    ]
+}
