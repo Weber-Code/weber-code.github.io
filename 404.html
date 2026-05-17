@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      // GitHub Pages serves this file for any path that doesn't map to a real file.
+      // Encode the deep path as query params and redirect to the sub-app root so
+      // the sub-app's index.html can restore the URL via history.replaceState.
+      const current = new URL(window.location.href);
+      const pathParts = current.pathname.split('/').filter(Boolean);
+
+      // pathParts[0] is the sub-app directory (e.g. 'homie').
+      // Everything after it is the route we need to restore.
+      const subApp = pathParts[0] ?? '';
+      const deepPath = '/' + pathParts.slice(1).join('/');
+
+      // Encode path and original search together in one namespaced param to avoid
+      // colliding with legitimate app query params (e.g. ?path= or ?query=).
+      const encoded = deepPath + (current.search ? current.search : '');
+
+      const target = new URL('/' + subApp + '/', current.origin);
+      target.searchParams.set('_gh_redirect', encoded);
+      if (current.hash) target.hash = current.hash;
+
+      window.location.replace(target.toString());
+    </script>
+  </head>
+  <body></body>
+</html>
