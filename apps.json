@@ -4,7 +4,8 @@
     {
       "path": "homie/",
       "title": "Homie",
-      "icon": "homie/favicon.png"
+      "icon": "homie/favicon.png",
+      "color": "#006d33"
     },
     {
       "path": "resume/",
