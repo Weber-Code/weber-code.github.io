@@ -1,0 +1,286 @@
+<!doctype html>
+<!--
+  Landing page at a Pages repo's root, copied there by tools/deploy-static-app.
+  It renders apps.json, which every deploy regenerates, so edit this file, not the deployed copy.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Apps</title>
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <style>
+      /* Follows the viewer's light or dark preference. */
+      :root {
+        --background: #f4f4f5;
+        --card: #ffffff;
+        --border: #e4e4e7;
+        --text: #18181b;
+        --muted: #52525b;
+        --logo: #3f3f46;
+        --icon-tile: #ffffff;
+        /* What an app's color mixes with for readable path text. */
+        --path-mix: black;
+        --path-mix-amount: 30%;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background: #18181b;
+          --card: #222225;
+          --border: #34343a;
+          --text: #ececee;
+          --muted: #a1a1aa;
+          --logo: #d4d4d8;
+          /* Light, so icons with transparent areas stand out on the dark card. */
+          --icon-tile: #ffffff;
+          --path-mix: white;
+          --path-mix-amount: 55%;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--background);
+        color: var(--text);
+        font-family:
+          system-ui,
+          -apple-system,
+          'Segoe UI',
+          Roboto,
+          sans-serif;
+        line-height: 1.5;
+      }
+
+      main {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 48px 16px;
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        column-gap: 16px;
+        align-items: center;
+        margin-bottom: 32px;
+      }
+
+      header.no-logo {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .logo {
+        width: 48px;
+        height: 48px;
+        flex: none;
+      }
+
+      .logo:empty {
+        display: none;
+      }
+
+      .logo svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .logo .logo-primary,
+      .logo .logo-secondary {
+        fill: var(--logo);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 1.75rem;
+        font-weight: 600;
+        line-height: 1.2;
+      }
+
+      .subtitle {
+        margin: 2px 0 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .apps {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      /*
+        Each card is accented with its app's theme color (--app, set from apps.json):
+        a stripe down the left edge, the hover border, and the path text.
+        The card itself stays neutral so its contents keep their contrast.
+      */
+      .app {
+        --app: var(--muted);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 16px 14px 20px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: var(--card);
+        box-shadow: inset 4px 0 0 var(--app);
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .app:hover {
+        border-color: var(--app);
+      }
+
+      .app:focus-visible {
+        outline: 2px solid var(--app);
+        outline-offset: 2px;
+      }
+
+      .icon {
+        display: grid;
+        place-items: center;
+        flex: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+        background: var(--icon-tile);
+        /* Keeps the white tile distinct from the white card in light mode. */
+        box-shadow: inset 0 0 0 1px var(--border);
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .icon img {
+        width: 32px;
+        height: 32px;
+      }
+
+      .app-title {
+        display: block;
+        font-weight: 600;
+        overflow-wrap: anywhere;
+      }
+
+      .app-path {
+        display: block;
+        color: color-mix(
+          in srgb,
+          var(--app),
+          var(--path-mix) var(--path-mix-amount)
+        );
+        font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+        font-size: 0.8rem;
+      }
+
+      .message {
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1 id="site-title"></h1>
+          <p class="subtitle">Apps hosted here</p>
+        </div>
+      </header>
+      <ul class="apps" id="apps"></ul>
+      <p class="message" id="message" hidden></p>
+    </main>
+
+    <script>
+      const header = document.querySelector('header');
+      const logo = document.querySelector('.logo');
+      const siteTitle = document.getElementById('site-title');
+      const list = document.getElementById('apps');
+      const message = document.getElementById('message');
+
+      siteTitle.textContent = location.hostname;
+
+      // Inlined rather than an <img>, so the page's CSS can color the logo.
+      fetch('logo.svg')
+        .then((response) => (response.ok ? response.text() : ''))
+        .then((svg) => {
+          logo.innerHTML = svg;
+          header.classList.toggle('no-logo', !logo.querySelector('svg'));
+        })
+        .catch(() => header.classList.add('no-logo'));
+
+      fetch('apps.json')
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(response.statusText);
+          }
+
+          return response.json();
+        })
+        .then((data) => {
+          document.title = data.title;
+          siteTitle.textContent = data.title;
+
+          for (const app of data.apps) {
+            list.append(renderApp(app));
+          }
+
+          if (data.apps.length === 0) {
+            showMessage('No apps are deployed here yet.');
+          }
+        })
+        .catch(() => showMessage("Couldn't load the list of apps."));
+
+      function renderApp(app) {
+        const item = document.createElement('li');
+        const link = document.createElement('a');
+        link.className = 'app';
+        link.href = app.path;
+
+        if (app.color) {
+          link.style.setProperty('--app', app.color);
+        }
+
+        const icon = document.createElement('span');
+        icon.className = 'icon';
+        icon.setAttribute('aria-hidden', 'true');
+
+        if (app.icon) {
+          const image = document.createElement('img');
+          image.src = app.icon;
+          image.alt = '';
+          icon.append(image);
+        } else {
+          icon.textContent = app.title.charAt(0).toUpperCase();
+        }
+
+        const text = document.createElement('span');
+        const title = document.createElement('span');
+        title.className = 'app-title';
+        title.textContent = app.title;
+        const path = document.createElement('span');
+        path.className = 'app-path';
+        path.textContent = `/${app.path}`;
+        text.append(title, path);
+
+        link.append(icon, text);
+        item.append(link);
+        return item;
+      }
+
+      function showMessage(text) {
+        message.textContent = text;
+        message.hidden = false;
+      }
+    </script>
+  </body>
+</html>

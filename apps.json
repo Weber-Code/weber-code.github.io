@@ -1,0 +1,16 @@
+{
+  "title": "Weber Code",
+  "apps": [
+    {
+      "path": "homie/",
+      "title": "Homie",
+      "icon": "homie/favicon.png"
+    },
+    {
+      "path": "resume/",
+      "title": "Troy Weber - Resume",
+      "icon": "resume/favicon.svg",
+      "color": "#56817a"
+    }
+  ]
+}
