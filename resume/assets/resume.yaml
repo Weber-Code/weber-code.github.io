@@ -1,0 +1,170 @@
+$schema: https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json
+
+basics:
+  name: Troy W. Weber
+  label: Senior Full-Stack Software Engineer
+  image: assets/photo.jpg
+  summary: >
+    Seeking a career as a Full-Stack Software Engineer.
+
+  profiles:
+    - network: LinkedIn
+      username: troywweber
+      url: https://www.linkedin.com/in/troywweber
+  encryptedContact:
+    iterations: 600000
+    salt: QNFkxpGz33Ht9um4/9+w+Q==
+    iv: bSD2EdVYE6V+xcQs
+    ciphertext: dn8g8wJYul/9jSqxHdoCRlEvqa+GNgSTfMmyDDLGe8NeWxkY5+uR5S8rPKU4KMtID7h1hOhBvFsSyit/gtlOS0O7ThtrICJ+DJIDt9nAfA==
+
+work:
+  - name: Synap
+    description: Software Company
+    position: Senior Software Engineer
+    url: https://www.synap.io/
+    startDate: '2016-07-01'
+    summary: >
+      Design, collaboratively plan, program, test, and deploy full-stack applications
+      using Angular, Nest.js, Docker, and AWS.
+
+    highlights:
+      - Automated the collection of assay data for a laboratory.
+        Worked with scientists, data analysts, and project managers
+        to design and implement an efficient, internally-hosted web-application.
+        Automation led to an increase in company throughput on state-mandated, environmental, and private mining projects.
+
+      - Automated a physical dice game for insurance and promotion agencies to lease at special events.
+        Collaborated with a mechanical engineer to design, wire, prototype, orders parts for, and program
+        the lighting, actuation, and video capture from an embedded Linux board for portability and offline use.
+
+      - Automated the creation of collateral for a graphic design firm using Adobe InDesign Server.
+        Project can be white-labeled as a product for the firm to sell to other graphic design companies.
+
+      - Architected, consulted on, and prototyped an offline-first, social-accomplishment project
+        consisting of a cloud server, a PWA, a hybrid native app, and a desktop app.
+
+      - Boosted camaraderie, code quality, and productivity of internal practices
+        by supervising, training, and advising coworkers and new employees in their software development tasks.
+
+  - name: Inspire Products
+    description: Manufacturing Company
+    position: Manufacturing Engineer
+    url: http://www.inspireproducts.com/
+    startDate: '2014-07-01'
+    endDate: '2016-05-01'
+    summary: >
+      Program, tool, fixture, inspect, maintain, and run plastic injection machines and multi-axis CNC machines
+      with 3-7 degrees of freedom to create high-quality medical devices.
+
+    highlights:
+      - Ensured success on bedside medical device project by drafting up an estimate for a delivery date
+        which saved the shop manager from under-delivering to the customer.
+
+      - Further accelerated production by introducing flow control logic to manager's G-code,
+        then handled machining, assembly, inspection, documentation, and shipping of 10 prototypes
+        which immediately landed additional order of 50 more devices.
+
+  - name: Innovative Drive
+    description: Engineering Company
+    position: Research & Development Intern
+    url: http://www.innovativedrive.com/
+    startDate: '2013-06-01'
+    endDate: '2013-08-01'
+    summary: >
+      Reverse-engineer an electro-acupuncture device to improve design and configuration
+      for the treatment of nausea and other physio-chemical ailments.
+
+    highlights:
+      - Partnered with company during senior project at Cal Poly to continue internship project.
+
+  - name: Alta Devices
+    description: Solar Energy Company
+    position: Metrology Intern
+    url: https://www.altadevices.com/
+    startDate: '2012-06-01'
+    endDate: '2012-09-01'
+    summary: >
+      Design, assemble, and program a semi-autonomous GaAs wafer analysis machine
+      with OCR to read laser-engraved wafers, optical sensors to assess resurfacing needs,
+      custom-designed parts to transport wafers between stations, safety mechanisms to protect users during operation,
+      and data collection software written and managed in Igor Pro 6.
+
+education:
+  - institution: California Polytechnic State University
+    url: https://www.calpoly.edu/
+    area: Mechanical Engineering, Mechatronics Concentration
+    studyType: Bachelor of Science
+    startDate: '2009-09-01'
+    endDate: '2014-06-01'
+    score: 3.412 / 4.0
+    courses:
+      - Mechatronics
+      - Robotics
+      - C & Unix
+      - System Controls
+      - Statics
+      - Dynamics
+      - Solid Modeling
+      - Mechanics of Materials
+      - Mechanical Vibrations
+      - Materials Joining, Removal, & Net Shape
+      - Electrical Engineering
+
+    activities: >
+      Actively participated in the Cal Poly Robotics Club as:
+      webmaster for 1 year, president for 2 years, and a member thereafter.
+
+skills:
+  - name: Frontend
+    level: Advanced
+    keywords:
+      - TypeScript
+      - HTML
+      - SASS
+      - Angular
+      - Ionic
+      - Lexical
+      - RxDB
+      - PWA
+
+  - name: Backend
+    level: Advanced
+    keywords:
+      - Nest.js
+      - GraphQL
+      - WebSockets
+      - MongoDB
+      - SQL
+      - RxDB
+      - Redis
+
+  - name: DevOps
+    level: Advanced
+    keywords:
+      - AWS Services
+      - AWS CDK
+      - Docker
+      - CI / CD
+      - Scripting
+      - Migrations
+
+interests:
+  - name: Programming
+    keywords:
+      - Python
+      - Rust
+      - Go
+      - Open Source
+
+  - name: Engineering
+    keywords:
+      - Micro-controllers
+      - CAD / OnShape
+      - 3D Printing
+      - Robotics
+
+  - name: Leisure
+    keywords:
+      - Video Games
+      - Bicycling
+      - Lego Building
