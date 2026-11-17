@@ -1,0 +1,14 @@
+(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var e=`<svg height="100" id="logo-svg" viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+    <g stroke-width="0" transform="translate(0 -932.42)">
+        <path class="logo-secondary" d="m47 957.42h10l10 50h-10z" opacity=".5"/>
+        <path class="logo-secondary" d="m27 957.42h10l10 50h-10z" opacity=".5"/>
+        <path class="logo-primary" d="m77 957.42h-10l-10 50h10z"/>
+        <path class="logo-primary" d="m57 957.42h-10l-10 50h10z"/>
+        <rect class="logo-primary" height="5" id="logo-colon-bottom" width="5" x="22" y="984.92"/>
+        <rect class="logo-primary" height="5" id="logo-colon-top" width="5" x="22" y="974.92"/>
+        <path class="logo-secondary" d="m67.5 7.5v10h15v65h-15v10h25v-85h-20z" opacity=".5"
+              transform="translate(0 932.42)"/>
+        <path class="logo-primary" d="m7.5 7.5v85h25v-10h-15v-65h15v-10h-15z" transform="translate(0 932.42)"/>
+    </g>
+</svg>
+`,t=a(`apps`),n=a(`message`);a(`logo`).innerHTML=e,fetch(`apps.json`).then(e=>{if(!e.ok)throw Error(e.statusText);return e.json()}).then(({apps:e})=>{t.append(...e.map(r)),e.length===0&&i(`No apps are deployed here yet.`)}).catch(()=>i(`Couldn't load the list of apps.`));function r(e){let t=document.createElement(`li`),n=document.createElement(`a`);n.className=`app`,n.href=e.path,e.color&&n.style.setProperty(`--app`,e.color);let r=document.createElement(`span`);if(r.className=`icon`,r.setAttribute(`aria-hidden`,`true`),e.icon){let t=document.createElement(`img`);t.src=e.icon,t.alt=``,r.append(t)}else r.textContent=e.title.charAt(0).toUpperCase();let i=document.createElement(`span`);i.className=`app-title`,i.textContent=e.title;let a=document.createElement(`span`);a.className=`app-path`,a.textContent=`/${e.path}`;let o=document.createElement(`span`);return o.append(i,a),n.append(r,o),t.append(n),t}function i(e){n.textContent=e,n.hidden=!1}function a(e){let t=document.getElementById(e);if(!t)throw Error(`The page has no #${e} element.`);return t}

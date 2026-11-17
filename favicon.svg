@@ -1,13 +1,15 @@
-<svg height="100" id="logo-svg" viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg"><style>svg{fill:#3f3f46}@media (prefers-color-scheme: dark){svg{fill:#d4d4d8}}</style>
+<svg height="100" viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+    <!-- The logo from libs/webercode/assets/logo.svg, filled to stay visible on light and dark tab bars. -->
+    <style>svg{fill:#3f3f46}@media (prefers-color-scheme: dark){svg{fill:#d4d4d8}}</style>
     <g stroke-width="0" transform="translate(0 -932.42)">
-        <path class="logo-secondary" d="m47 957.42h10l10 50h-10z" opacity=".5"/>
-        <path class="logo-secondary" d="m27 957.42h10l10 50h-10z" opacity=".5"/>
-        <path class="logo-primary" d="m77 957.42h-10l-10 50h10z"/>
-        <path class="logo-primary" d="m57 957.42h-10l-10 50h10z"/>
-        <rect class="logo-primary" height="5" id="logo-colon-bottom" width="5" x="22" y="984.92"/>
-        <rect class="logo-primary" height="5" id="logo-colon-top" width="5" x="22" y="974.92"/>
-        <path class="logo-secondary" d="m67.5 7.5v10h15v65h-15v10h25v-85h-20z" opacity=".5"
+        <path d="m47 957.42h10l10 50h-10z" opacity=".5"/>
+        <path d="m27 957.42h10l10 50h-10z" opacity=".5"/>
+        <path d="m77 957.42h-10l-10 50h10z"/>
+        <path d="m57 957.42h-10l-10 50h10z"/>
+        <rect height="5" width="5" x="22" y="984.92"/>
+        <rect height="5" width="5" x="22" y="974.92"/>
+        <path d="m67.5 7.5v10h15v65h-15v10h25v-85h-20z" opacity=".5"
               transform="translate(0 932.42)"/>
-        <path class="logo-primary" d="m7.5 7.5v85h25v-10h-15v-65h15v-10h-15z" transform="translate(0 932.42)"/>
+        <path d="m7.5 7.5v85h25v-10h-15v-65h15v-10h-15z" transform="translate(0 932.42)"/>
     </g>
 </svg>
