@@ -43,7 +43,10 @@ work:
       - Architected, consulted on, and prototyped an offline-first, social-accomplishment project
         consisting of a cloud server, a PWA, a hybrid native app, and a desktop app.
 
-      - Boosted camaraderie, code quality, and productivity of internal practices
+      - Reverse engineered and improved on delivery of manufacturing quoting / estimation software
+        with limited organization and documentation available.
+
+      - Boosted camaraderie, code quality, practices, and productivity of internal practices
         by supervising, training, and advising coworkers and new employees in their software development tasks.
 
   - name: Inspire Products
@@ -107,8 +110,9 @@ education:
       - Solid Modeling
       - Mechanics of Materials
       - Mechanical Vibrations
-      - Materials Joining, Removal, & Net Shape
+      - Manufacturing
       - Electrical Engineering
+      - Technical Writing
 
     activities: >
       Actively participated in the Cal Poly Robotics Club as:
@@ -123,6 +127,7 @@ skills:
       - SASS
       - Angular
       - Ionic
+      - Capacitor
       - Lexical
       - RxDB
       - PWA
@@ -143,25 +148,38 @@ skills:
     keywords:
       - AWS Services
       - AWS CDK
+      - Google Cloud
       - Docker
+      - VM Management
       - CI / CD
+      - CLIs
       - Scripting
       - Migrations
+      - InstallShield
 
 interests:
   - name: Programming
     keywords:
       - Python
       - Rust
+      - C# .NET
+      - PowerShell
       - Go
+      - AI development
       - Open Source
 
   - name: Engineering
     keywords:
       - Micro-controllers
       - CAD / OnShape
+      - CAD as Code
       - 3D Printing
       - Robotics
+
+  - name: Personal Projects
+    keywords:
+      - Home Management App
+      - Simplifi Scripts
 
   - name: Leisure
     keywords:
